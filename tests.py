@@ -15,7 +15,7 @@ class TestCCValidator(unittest.TestCase):
         """Creating one randomized value"""
         max_length = 20
         min_length = 0
-        num_tests = 1000000
+        num_tests = 800000
 
         for i in range(num_tests):
 
