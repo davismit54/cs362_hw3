@@ -24,23 +24,23 @@ class TestCCValidator(unittest.TestCase):
 
             match random.randint(0, 6):
                 case 0:
-                    #visa
+                    # visa
                     card_num += "4"
-                
+
                 case 1:
-                    #MasterCard 1
+                    # asterCard 1
                     card_num += str(random.randint(51, 55))
 
                 case 2:
-                    #MasterCard 2
+                    # MasterCard 2
                     card_num += str(random.randint(2221, 2720))
 
                 case 3:
-                    #Amex 1
+                    # Amex 1
                     card_num += "34"
 
                 case 4:
-                    #Amex 2
+                    # Amex 2
                     card_num += "37"
 
             for char in range(length - len(card_num)):
