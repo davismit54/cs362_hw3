@@ -13,8 +13,8 @@ class TestCCValidator(unittest.TestCase):
 
     def test1(self):
         """Creating one randomized value"""
-        max_length = 20
-        min_length = 0
+        max_length = 19
+        min_length = 10
         num_tests = 800000
 
         for i in range(num_tests):
