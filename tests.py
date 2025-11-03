@@ -15,14 +15,14 @@ class TestCCValidator(unittest.TestCase):
         """Creating one randomized value"""
         max_length = 20
         min_length = 0
-        num_tests = 1000
+        num_tests = 1000000
 
         for i in range(num_tests):
 
-            length = random.randint(0,max_length)
+            length = random.randint(0, max_length)
             card_num = ""
             for char in range(length):
-                char = str(random.randint(0,9))
+                char = str(random.randint(0, 9))
                 card_num += char
 
             print(credit_card_validator(card_num))
