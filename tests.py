@@ -19,9 +19,31 @@ class TestCCValidator(unittest.TestCase):
 
         for i in range(num_tests):
 
-            length = random.randint(0, max_length)
+            length = random.randint(min_length, max_length)
             card_num = ""
-            for char in range(length):
+
+            match random.randint(0, 6):
+                case 0:
+                    #visa
+                    card_num += "4"
+                
+                case 1:
+                    #MasterCard 1
+                    card_num += str(random.randint(51, 55))
+
+                case 2:
+                    #MasterCard 2
+                    card_num += str(random.randint(2221, 2720))
+
+                case 3:
+                    #Amex 1
+                    card_num += "34"
+
+                case 4:
+                    #Amex 2
+                    card_num += "37"
+
+            for char in range(length - len(card_num)):
                 char = str(random.randint(0, 9))
                 card_num += char
 
@@ -29,4 +51,4 @@ class TestCCValidator(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main(verbosity=2)
+    unittest.main(verbosity=0)
